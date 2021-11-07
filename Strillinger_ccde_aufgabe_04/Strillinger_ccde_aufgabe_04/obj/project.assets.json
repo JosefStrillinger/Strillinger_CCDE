@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VSProjects\\Strillinger_ccde_aufgabe_04\\Strillinger_ccde_aufgabe_04\\Strillinger_ccde_aufgabe_04.csproj",
+      "projectUniqueName": "D:\\GitHubDirectory\\Strillinger_CCDE\\Strillinger_ccde_aufgabe_04\\Strillinger_ccde_aufgabe_04\\Strillinger_ccde_aufgabe_04.csproj",
       "projectName": "Strillinger_ccde_aufgabe_04",
-      "projectPath": "D:\\VSProjects\\Strillinger_ccde_aufgabe_04\\Strillinger_ccde_aufgabe_04\\Strillinger_ccde_aufgabe_04.csproj",
+      "projectPath": "D:\\GitHubDirectory\\Strillinger_CCDE\\Strillinger_ccde_aufgabe_04\\Strillinger_ccde_aufgabe_04\\Strillinger_ccde_aufgabe_04.csproj",
       "packagesPath": "C:\\Users\\jstri\\.nuget\\packages\\",
-      "outputPath": "D:\\VSProjects\\Strillinger_ccde_aufgabe_04\\Strillinger_ccde_aufgabe_04\\obj\\",
+      "outputPath": "D:\\GitHubDirectory\\Strillinger_CCDE\\Strillinger_ccde_aufgabe_04\\Strillinger_ccde_aufgabe_04\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
