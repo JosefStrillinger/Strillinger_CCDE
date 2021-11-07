@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Strillinger_ccde_aufgabe_04/1.0.0": {
+        "runtime": {
+          "Strillinger_ccde_aufgabe_04.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Strillinger_ccde_aufgabe_04/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

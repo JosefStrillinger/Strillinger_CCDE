@@ -1,0 +1,16 @@
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\bin\Debug\net5.0\Strillinger_ccde_aufgabe_04.exe
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\bin\Debug\net5.0\Strillinger_ccde_aufgabe_04.deps.json
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\bin\Debug\net5.0\Strillinger_ccde_aufgabe_04.runtimeconfig.json
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\bin\Debug\net5.0\Strillinger_ccde_aufgabe_04.runtimeconfig.dev.json
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\bin\Debug\net5.0\Strillinger_ccde_aufgabe_04.dll
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\bin\Debug\net5.0\ref\Strillinger_ccde_aufgabe_04.dll
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\bin\Debug\net5.0\Strillinger_ccde_aufgabe_04.pdb
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\obj\Debug\net5.0\Strillinger_ccde_aufgabe_04.csproj.AssemblyReference.cache
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\obj\Debug\net5.0\Strillinger_ccde_aufgabe_04.GeneratedMSBuildEditorConfig.editorconfig
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\obj\Debug\net5.0\Strillinger_ccde_aufgabe_04.AssemblyInfoInputs.cache
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\obj\Debug\net5.0\Strillinger_ccde_aufgabe_04.AssemblyInfo.cs
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\obj\Debug\net5.0\Strillinger_ccde_aufgabe_04.csproj.CoreCompileInputs.cache
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\obj\Debug\net5.0\Strillinger_ccde_aufgabe_04.dll
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\obj\Debug\net5.0\ref\Strillinger_ccde_aufgabe_04.dll
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\obj\Debug\net5.0\Strillinger_ccde_aufgabe_04.pdb
+D:\VSProjects\Strillinger_ccde_aufgabe_04\Strillinger_ccde_aufgabe_04\obj\Debug\net5.0\Strillinger_ccde_aufgabe_04.genruntimeconfig.cache
