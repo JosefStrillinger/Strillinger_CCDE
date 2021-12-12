@@ -3,7 +3,6 @@ import random
 
 questions = []
 
-
 def getData():
     file = open('millionaire.txt', 'r')
     lines = file.read()
@@ -16,7 +15,6 @@ def getData():
         question = [parts[0], parts[1], parts[2],
                     parts[3], parts[4], parts[5], parts[2]]
         questions.append(question)
-
 
 def randomizeAnswer():
     rand1 = random.randint(2,5)
@@ -31,13 +29,11 @@ def randomizeAnswer():
         rand4 = random.randint(2,5)
     return rand1, rand2, rand3, rand4
 
-
 def getQuestion(rand):
     ans1, ans2, ans3, ans4 = randomizeAnswer()
     question = Question(questions[rand][0], questions[rand][1], questions[rand][ans1],
                         questions[rand][ans2], questions[rand][ans3], questions[rand][ans4], questions[rand][6])
     return question
-
 
 getData()
 
@@ -59,7 +55,7 @@ while isRunning == 1:
         print("Correct\n")
         score += 1
         if score == 10:
-            print("Congratulations, you did it!!!\nYou really won!\nPresitge, that is!\nYou're welcome\n\n\nNow, go away\n")
+            print("Congratulations, you did it!!!\nYou really won!\nPresitge, that is!\nYou're welcome\n\n\nNow, go away...\n\n")
             isRunning = 0
         else:
             match score:
