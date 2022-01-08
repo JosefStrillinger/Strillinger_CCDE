@@ -2,7 +2,7 @@ from model import Question, getData, randomizeAnswer, getQuestion
 import random
 
 questions = []
-'''
+"""
 def getData():
     file = open('millionaire.txt', 'r')
     lines = file.read()
@@ -34,7 +34,7 @@ def getQuestion(rand):
     question = Question(questions[rand][0], questions[rand][1], questions[rand][ans1],
                         questions[rand][ans2], questions[rand][ans3], questions[rand][ans4], questions[rand][6])
     return question
-'''
+"""
 getData(questions)
 
 score = 0
