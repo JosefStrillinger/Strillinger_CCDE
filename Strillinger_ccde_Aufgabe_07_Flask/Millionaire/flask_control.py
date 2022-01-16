@@ -1,18 +1,18 @@
-from model import Question, getData, getQuestion
+from model import Question, getRandomQuestion, getData
 from flask import Flask, render_template, session
 
 
 app = Flask(__name__)
 app.secret_key='_5#y2L”F4Q8z\n\xec]/'
+
 @app.route('/')
 def start():
    session["level"]=0
    return render_template("startseite.html")
 
-@app.route('/quest')
+@app.route('/questions')
 def showQuests():
-   questions = []
-   return render_template("questions.html", getData())
+   return render_template("questions.html", questions = getData("millionaire.txt"))
 
 @app.route('/game')
 @app.route('/game/<int:answer>')
@@ -29,9 +29,10 @@ def game(answer = -1):
          session["level"] = 0
          return render_template("end.html", result=dict, text="Sie haben verloren!")
 
-   questions = getData()
-   q=getQuestion(session["level"], questions)
-   return render_template("game.html", level = session["level"])
+   q= getRandomQuestion(session["level"], getData("millionaire.txt"))
+   
+   session["correct"] = q.correctAnswer
+   return render_template("game.html",result=dict, level = session["level"], question=q)
 
 if __name__ == '__main__':
    app.debug = True

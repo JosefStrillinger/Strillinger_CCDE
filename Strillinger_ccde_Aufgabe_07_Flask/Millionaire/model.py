@@ -1,38 +1,38 @@
-import random
 from random import randint
+import random
+
 
 class Question:
+    
     def __init__(self, level, question, answers, correctAnswer):
-        self . _level = level
-        self . _question = question
-        self . _answers = answers
-        self . _correctAnswer = correctAnswer
-    def __str__(self):
-        ret = str(self . _level) +" | "+self . _question+" | "+self . _answers+" | "
-        return ret
+        self.level=level
+        self.question=question
+        self.answers=answers
+        self.correctAnswer=correctAnswer
+    
+    def __str__(self):      
+       return str(self.level)+" "+" "+self.question+" "+str(self.answers)+" "+str(self.correctAnswer)
+    
 
-def getData():
-    questions = []
-    file = open('millionaire.txt', 'r')
-    lines = file.read()
-    file.close()
-    line = []
-    line = lines.split("\n")
-    for l in range(len(line)):
-        parts = []
-        parts = line[l].split("\t")
-        answers = [parts[2], parts[3], parts[4], parts[5]]
+def getData(filename):
+    f = open (filename,"r")
+    f.readline()
+    lines=f.readlines()
+    questions=[]
+    for item in lines:
+        question=item.split("\t")
+        answers=[question[2],question[3],question[4],question[5]]
         random.shuffle(answers)
-        correct = parts[2]
-        q = Question(parts[0], parts[1], answers, correct)     
-        questions.append(q)
+        correct=answers.index(question[2])
+        q1= Question(question[0],question[1],answers,correct)
+        questions.append(q1)
     return questions
-
-def getQuestion(level, questions):
-    questionsOfLevel = []
+    
+def getRandomQuestion(level, questions):
+    levelQuestions = []
     for question in questions:
         if int(question.level) == level:
-            questionsOfLevel.append(question)
-    random = randint(0, len(questionsOfLevel) - 1)
-    return questionsOfLevel[random]
+            levelQuestions.append(question)
+    random = randint(0, len(levelQuestions) - 1)
+    return levelQuestions[random]    
 
