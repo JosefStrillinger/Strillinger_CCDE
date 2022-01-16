@@ -1,7 +1,6 @@
 from random import randint
 import random
 
-
 class Question:
     
     def __init__(self, level, question, answers, correctAnswer):
@@ -11,9 +10,8 @@ class Question:
         self.correctAnswer=correctAnswer
     
     def __str__(self):      
-       return str(self.level)+" "+" "+self.question+" "+str(self.answers)+" "+str(self.correctAnswer)
+       return str(self.level)+" "+" "+self.question+" | "+str(self.answers)+" | "+str(self.correctAnswer)
     
-
 def getData(filename):
     f = open (filename,"r")
     f.readline()
@@ -34,5 +32,4 @@ def getRandomQuestion(level, questions):
         if int(question.level) == level:
             levelQuestions.append(question)
     random = randint(0, len(levelQuestions) - 1)
-    return levelQuestions[random]    
-
+    return levelQuestions[random]
