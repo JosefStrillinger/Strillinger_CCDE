@@ -5,6 +5,7 @@
 <table id="example" class="display" style="width:100%">
     <thead>
         <tr>
+            <th>ID</th>
             <th>Question</th>
             <th>Level</th>
         </tr>
@@ -12,6 +13,7 @@
     <tbody>
         {% for q in questions %}
         <tr>
+            <td>{{q.id}}</td>
             <td>{{q.question}}</td>
             <td>{{q.level}}</td>
         </tr>
@@ -19,6 +21,7 @@
     </tbody>
     <tfoot>
         <tr>
+            <th>ID</th>
             <th>Question</th>
             <th>Level</th>
         </tr>
