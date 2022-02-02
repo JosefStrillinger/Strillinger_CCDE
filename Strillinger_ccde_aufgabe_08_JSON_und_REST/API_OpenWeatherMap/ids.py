@@ -1,1 +1,1 @@
-openweathermap_key = 'a454f66013e2aba0748b316e283eeea2'
+openweathermap_key = '5291b31329d3b09d28f9411f8567d8fc'
