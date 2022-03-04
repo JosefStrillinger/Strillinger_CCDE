@@ -1,4 +1,4 @@
-from distutils.log import info
+#from distutils.log import info
 from random import randint
 import random
 from flask import Flask, request, jsonify, session
@@ -62,12 +62,12 @@ def getData():
     infos = Millionaire.queary.all()
     questions=[]
     i = 0
-    for id in range(infos):
+    for info in infos:
         # Millionaire mill = Millionaire.get(id)
-        answers=[infos[id].correct_answer,infos[id].answer2,infos[id].answer3,infos[id].answer4]
+        answers=[info.correct_answer,info.answer2,info.answer3,info.answer4]
         random.shuffle(answers)
         #correct=answers.index(infos[id].correct_answer)
-        q1= Question(infos[id].difficulty, infos[id].question, answers,infos[id].correct_answer, id)#auf db umschreiben, danach ===> profit
+        q1= Question(info.difficulty, info.question, answers,info.correct_answer, info.id)#auf db umschreiben, danach ===> profit
         questions.append(q1)
         i+=1
     return questions

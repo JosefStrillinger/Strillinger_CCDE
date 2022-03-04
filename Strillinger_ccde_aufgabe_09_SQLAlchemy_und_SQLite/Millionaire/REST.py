@@ -13,10 +13,10 @@ print(result)
 result= requests.get(host+"1").json()
 print(result)
 
-result = requests.put(host + "500", data={"level":1, "question":"Who is the greatest rapper of all time?","answers": ["Eminem","Jay-Z","Kendrik Lamar","J. Cole"],"correct":"Eminem"}).json()
+result = requests.put(host + "500", data={"difficulty":1, "question":"Who is the greatest rapper of all time?","correct_answer":"Eminem","answer2":"Jay-Z","answer3":"Kendrik Lamar","answer4":"J. Cole","background_information":"JS"}).json()
 print (result)
 
-result = requests.patch(host + "500", data={"level":1, "question":"Who is the greatest rapper of all time, lmao?","answers": ["Eminem","Jay-Z","Kendrik Lamar","J. Cole"],"correct":"Eminem"}).json()
+result = requests.patch(host + "500", data={"difficulty":1, "question":"Who is the greatest rapper of all time, lmao?","correct_answer":"Eminem","answer2":"Jay-Z","answer3":"Kendrik Lamar","answer4":"J. Cole","background_information":"JS"}).json()
 print (result)
 
 
