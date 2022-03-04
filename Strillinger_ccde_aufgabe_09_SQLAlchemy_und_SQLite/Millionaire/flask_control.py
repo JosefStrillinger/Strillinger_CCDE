@@ -1,6 +1,6 @@
 import json
 from flask_restful import Api
-from model import Question, getRandomQuestion, getData, Service, AllQuests, getQuests
+from model import Question, Millionaire, getRandomQuestion, getData, Service, AllQuests, getQuests
 from flask import Flask, render_template, session
 
 

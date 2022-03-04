@@ -66,7 +66,7 @@ def getData():
         # Millionaire mill = Millionaire.get(id)
         answers=[infos[id].correct_answer,infos[id].answer2,infos[id].answer3,infos[id].answer4]
         random.shuffle(answers)
-        correct=answers.index(infos[id].correct_answer)
+        #correct=answers.index(infos[id].correct_answer)
         q1= Question(infos[id].difficulty, infos[id].question, answers,infos[id].correct_answer, id)#auf db umschreiben, danach ===> profit
         questions.append(q1)
         i+=1
