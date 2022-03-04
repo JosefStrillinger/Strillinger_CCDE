@@ -1,7 +1,7 @@
 from distutils.log import info
 from random import randint
 import random
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, session
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql.expression import func
@@ -42,27 +42,6 @@ class Millionaire(Base):
     answer4 = Column(Text)
     background_information = Column(Text)
 
-class MillionaireREST(Resource):
-    def get(self, id):
-        info = Millionaire.queary.get(id)
-        return jsonify(info)
-    def put(self, id):
-        data = request.get_json(force=True)['info']
-        print(data)
-        info = Millionaire(difficulty=data['difficulty'], question=data['question'], correct_answer=data['correct_answer'], answer2=data['answer2'], answer3=data['answer3'], answer4=data['answer4'], background_information=['background_information'])
-        db_session.add(info)
-        db_session.flush()
-        return jsonify(info)
-    def delete(self, id):
-        info = Millionaire.queary.get(id)
-        if info is None:
-            return jsonify({'message':'object with id %d does not exist' % id})
-        db_session.delete(info)
-        db_session.flush()
-        return jsonify({'message':'%d deleted' % id})
-    def patch(self, id):
-        info = Millionaire.queary.get(id)
-
 class Question:
     
     def __init__(self, level, question, answers, correctAnswer, id):
@@ -79,18 +58,16 @@ class Question:
         return {'id': self.id, 'question':self.question, 'level':self.level, 'answers':self.answers, 'correctAnswer': self.correctAnswer }
     
 
-def getData(filename):
-    f = open (filename,"r")
-    f.readline()
-    lines=f.readlines()
+def getData():
+    infos = Millionaire.queary.all()
     questions=[]
     i = 0
-    for item in lines:     
-        question=item.split("\t")
-        answers=[question[2],question[3],question[4],question[5]]
+    for id in range(infos):
+        # Millionaire mill = Millionaire.get(id)
+        answers=[infos[id].correct_answer,infos[id].answer2,infos[id].answer3,infos[id].answer4]
         random.shuffle(answers)
-        correct=answers.index(question[2])
-        q1= Question(question[0],question[1],answers,correct, i)
+        correct=answers.index(infos[id].correct_answer)
+        q1= Question(infos[id].difficulty, infos[id].question, answers,infos[id].correct_answer, id)#auf db umschreiben, danach ===> profit
         questions.append(q1)
         i+=1
     return questions
@@ -103,7 +80,7 @@ def getRandomQuestion(level, questions):
     random = randint(0, len(levelQuestions) - 1)
     return levelQuestions[random]
 
-quests = getData("millionaire.txt") 
+quests = getData() 
 
 def getQuests():
     return quests
@@ -159,9 +136,5 @@ class Service(Resource):
 
 class AllQuests(Resource):
     def get(self):
-        message = []
-        for qu in quests:
-            message.append(qu.serialize())
-        return {"data" : message}
-    
-    
+        infos = Millionaire.queary.all()
+        return jsonify(infos)
