@@ -1,8 +1,67 @@
+from distutils.log import info
 from random import randint
 import random
-from flask import request
+from flask import Flask, request, jsonify
+from sqlalchemy.orm import scoped_session, sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.sql.expression import func
+from sqlalchemy import create_engine
+from flask_restful import Resource, Api
+from dataclasses import dataclass
+from sqlalchemy import Column, Integer, Text
+from sqlalchemy.ext.declarative import declarative_base
+import json
 
-from flask_restful import Resource
+Base = declarative_base()
+metadata = Base.metadata
+
+engine = create_engine('sqlite:///millionaire.sqlite3')
+db_session = scoped_session(sessionmaker(autocommit=True, autoflush=True, bind=engine))
+Base.queary = db_session.query_property()
+app = Flask(__name__)
+api = Api(app)
+
+class Millionaire(Base):
+    __tablename__ = 'millionaire'
+    
+    id: int
+    difficulty: int
+    question: str
+    correct_answer: str
+    answer2: str
+    answer3: str
+    answer4: str
+    background_information: str
+
+    id = Column(Integer, primary_key=True)
+    difficulty = Column(Integer)
+    question = Column(Text)
+    correct_answer = Column(Text)
+    answer2 = Column(Text)
+    answer3 = Column(Text)
+    answer4 = Column(Text)
+    background_information = Column(Text)
+
+class MillionaireREST(Resource):
+    def get(self, id):
+        info = Millionaire.queary.get(id)
+        return jsonify(info)
+    def put(self, id):
+        data = request.get_json(force=True)['info']
+        print(data)
+        info = Millionaire(difficulty=data['difficulty'], question=data['question'], correct_answer=data['correct_answer'], answer2=data['answer2'], answer3=data['answer3'], answer4=data['answer4'], background_information=['background_information'])
+        db_session.add(info)
+        db_session.flush()
+        return jsonify(info)
+    def delete(self, id):
+        info = Millionaire.queary.get(id)
+        if info is None:
+            return jsonify({'message':'object with id %d does not exist' % id})
+        db_session.delete(info)
+        db_session.flush()
+        return jsonify({'message':'%d deleted' % id})
+    def patch(self, id):
+        info = Millionaire.queary.get(id)
 
 class Question:
     
@@ -53,31 +112,47 @@ def getQuests():
 
 class Service(Resource):
     def get(self, id):
-        for qu in quests:
-            if qu.id == id:
-                return {"Result" : qu.serialize()}
-        return {"Result" : "Abfrage hat nicht funktioniert"}
+        info = Millionaire.queary.get(id)
+        return jsonify(info)
     
     def put(self, id):
-        qu = Question(request.form['level'], request.form['question'], request.form['answers'], request.form['correct'], id)
-        quests.append(qu)
-        return {"Result": "Erfolgreich hinzugefügt!"}
+        data = request.get_json(force=True)['info']
+        print(data)
+        info = Millionaire(difficulty=data['difficulty'], question=data['question'], correct_answer=data['correct_answer'], answer2=data['answer2'], answer3=data['answer3'], answer4=data['answer4'], background_information=['background_information'])
+        db_session.add(info)
+        db_session.flush()
+        return jsonify(info)
     
     def patch(self, id):
-        qu = Question(request.form['level'], request.form['question'], request.form['answers'], request.form['correct'], id)
-        print(qu)
-        for q in quests:
-            if q.id == id:
-                quests[quests.index(q)]=qu
-                return{"Result": "Efolgreich geändert!"}
-        return{"Result":"Nicht erfolgreich geändert!"}
+        info = Millionaire.queary.get(id)
+        if info is None:
+            return jsonify({'message':'object with id %d does not nexist' % id})
+        data=json.loads(request.json['info'])
+        if 'difficulty' in data:
+            info.difficulty = data['difficulty']
+        if 'question' in data:
+            info.question = data['question']
+        if 'correct_answer' in data:
+            info.correct_answer = data['correct_answer']
+        if 'answer2' in data:
+            info.answer2 = data['answer2']
+        if 'answer3' in data:
+            info.answer3 = data['answer3']
+        if 'answer4' in data:
+            info.answer4 = data['answer4']
+        if 'background_information' in data:
+            info.background_information = data['background_information']
+        db_session.add(info)
+        db_session.flush()
+        return jsonify({'message': 'object with id %d modified' % id})
     
     def delete(self, id):
-        for qu in quests:
-            if qu.id==id:
-                quests.pop(quests.index(qu))
-                return {"Result" : "Erfolgreich gelöscht!"}
-        return {"Result":"Nicht erfolgreich gelöscht!"}
+        info = Millionaire.queary.get(id)
+        if info is None:
+            return jsonify({'message':'object with id %d does not exist' % id})
+        db_session.delete(info)
+        db_session.flush()
+        return jsonify({'message':'%d deleted' % id})
 
 
 #TODO All-Questions
