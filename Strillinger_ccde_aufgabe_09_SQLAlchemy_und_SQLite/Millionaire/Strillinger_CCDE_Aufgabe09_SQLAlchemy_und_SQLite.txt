@@ -1,0 +1,29 @@
+1. Vorbereitung
+
+termsql:
+Hat nicht funktioniert, konnte es nicht starten, obwohl es eigentich installiert wurde.
+
+
+
+sqlacodegen:
+
+PS D:\GitHubDirectory\Strillinger_CCDE\Strillinger_ccde_aufgabe_09_SQLAlchemy_und_SQLite> sqlacodegen sqlite:///millionaire.sqlite3
+# coding: utf-8
+from sqlalchemy import Column, Integer, Text
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
+metadata = Base.metadata
+
+
+class Millionaire(Base):
+    __tablename__ = 'millionaire'
+
+    id = Column(Integer, primary_key=True)
+    difficulty = Column(Integer)
+    question = Column(Text)
+    correct_answer = Column(Text)
+    answer2 = Column(Text)
+    answer3 = Column(Text)
+    answer4 = Column(Text)
+    background_information = Column(Text)
