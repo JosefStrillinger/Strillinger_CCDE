@@ -1,0 +1,14 @@
+PS D:\GitHubDirectory\Strillinger_CCDE\Cognitive_Services> & C:/Users/jstri/AppData/Local/Programs/Python/Python310/python.exe d:/GitHubDirectory/Strillinger_CCDE/Cognitive_Services/cognitive_services_test/computer_vision_analyze_image.py
+{'additional_properties': {}, 'name': 'outdoor', 'confidence': 0.9877363443374634, 'hint': None}
+{'additional_properties': {}, 'name': 'sky', 'confidence': 0.9666658639907837, 'hint': None}
+{'additional_properties': {}, 'name': 'mountain', 'confidence': 0.9542472958564758, 'hint': None}
+{'additional_properties': {}, 'name': 'building', 'confidence': 0.9479462504386902, 'hint': None}
+{'additional_properties': {}, 'name': 'landscape', 'confidence': 0.9459766149520874, 'hint': None}
+{'additional_properties': {}, 'name': 'lake', 'confidence': 0.9413833618164062, 'hint': None}
+{'additional_properties': {}, 'name': 'water', 'confidence': 0.9365941286087036, 'hint': None}
+{'additional_properties': {}, 'name': 'house', 'confidence': 0.844549298286438, 'hint': None}
+{'additional_properties': {}, 'name': 'nature', 'confidence': 0.7294870615005493, 'hint': None}
+{'additional_properties': {}, 'name': 'city', 'confidence': 0.5951849818229675, 'hint': None}
+{'additional_properties': {}, 'name': 'travel', 'confidence': 0.4687652289867401, 'hint': None}
+a city next to a body of water with mountains in the background
+0.5776825547218323

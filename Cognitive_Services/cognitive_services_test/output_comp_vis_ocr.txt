@@ -1,0 +1,38 @@
+PS D:\GitHubDirectory\Strillinger_CCDE\Cognitive_Services> & C:/Users/jstri/AppData/Local/Programs/Python/Python310/python.exe d:/GitHubDirectory/Strillinger_CCDE/Cognitive_Services/cognitive_services_test/computer_vision_ocr.py
+{'additional_properties': {}, 'status': <OperationStatusCodes.succeeded: 'succeeded'>, 'created_date_time': '2022-05-01T14:49:47Z', 'last_updated_date_time': '2022-05-01T14:49:50Z', 'analyze_result': <azure.cognitiveservices.vision.computervision.models._models_py3.AnalyzeResults object at 0x00000195AB904C10>}
+6+0.00 ~
+[727.0, 1898.0, 906.0, 1890.0, 908.0, 1930.0, 727.0, 1936.0]
+nissan
+[712.0, 1932.0, 881.0, 1934.0, 881.0, 1969.0, 712.0, 1966.0]
+Seite 748 der Originalhandschrift Vigil Rabers in der
+[374.0, 2579.0, 1507.0, 2573.0, 1508.0, 2630.0, 374.0, 2638.0]
+Zum Vergleich die Kopie im Tiroler Landesmuseum
+[1649.0, 2569.0, 2780.0, 2570.0, 2780.0, 2628.0, 1649.0, 2626.0]
+Anna-Amalia-Bibliothek in Weimar (Signatur Fol. 220),
+[377.0, 2634.0, 1507.0, 2630.0, 1507.0, 2690.0, 377.0, 2694.0]
+Ferdinandeum (Signatur W 14504, Band 5) von Marie
+[1645.0, 2624.0, 2783.0, 2626.0, 2783.0, 2686.0, 1645.0, 2684.0]
+die sich in Inhalt und Reihenfolge mit seiner Sterzinger
+[374.0, 2692.0, 1509.0, 2689.0, 1510.0, 2746.0, 375.0, 2750.0]
+Fischnaler, die sich in Farbe, Inhalt und Reihenfolge mit der
+[1646.0, 2681.0, 2779.0, 2683.0, 2779.0, 2743.0, 1646.0, 2741.0]
+Wappenliste, Blatt 16" (= Seite 16) und 16º (= Seite 17), voll-
+[378.0, 2750.0, 1506.0, 2743.0, 1506.0, 2801.0, 378.0, 2811.0]
+Originalhandschrift in Weimar auf Seite 748 und mit den
+[1650.0, 2740.0, 2782.0, 2740.0, 2782.0, 2798.0, 1650.0, 2798.0]
+kommen deckt. Nur für die Wappen Michl Zappl 748/7 und
+[376.0, 2808.0, 1516.0, 2800.0, 1516.0, 2858.0, 376.0, 2868.0]
+vierzehn Namen der Sterzinger Wappenliste Rabers im Stadt-
+[1650.0, 2798.0, 2776.0, 2798.0, 2776.0, 2857.0, 1651.0, 2857.0]
+Gumpnperg 748/9, die öfters vorkommen, lässt er deutlich eine
+[378.0, 2868.0, 1509.0, 2855.0, 1510.0, 2916.0, 378.0, 2930.0]
+archiv zu Sterzing (Sign. Nr. 29) bis auf die beiden genann-
+[1635.0, 2854.0, 2777.0, 2855.0, 2777.0, 2917.0, 1635.0, 2915.0]
+Zeile (mit langem Strich) jeweils frei.
+[376.0, 2926.0, 1082.0, 2920.0, 1083.0, 2981.0, 376.0, 2987.0]
+ten Wappen vollkommen deckt; diese wurden bereits auf den
+[1643.0, 2910.0, 2779.0, 2910.0, 2779.0, 2972.0, 1643.0, 2972.0]
+Seiten 391/3 und 125/6 kopiert.
+[1653.0, 2968.0, 2277.0, 2968.0, 2277.0, 3028.0, 1653.0, 3026.0]
+7
+[2742.0, 3885.0, 2780.0, 3884.0, 2777.0, 3929.0, 2740.0, 3929.0]

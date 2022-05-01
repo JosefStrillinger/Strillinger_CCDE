@@ -16,7 +16,7 @@ def decode_base64(filename, data):
         decoded_data = base64.decodebytes(base64_decode_data)
         file.write(decoded_data)
 
-with open("img/elon-musk.jpg","rb") as image_file:
+with open("image_server/img/elon-musk.jpg","rb") as image_file:
     encode_base64 = encode_base64(image_file.read())
 
 response = requests.put("%s/%s" % (host, "1"), data={

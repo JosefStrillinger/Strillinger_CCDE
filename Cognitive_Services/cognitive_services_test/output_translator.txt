@@ -1,0 +1,18 @@
+PS D:\GitHubDirectory\Strillinger_CCDE\Cognitive_Services> & C:/Users/jstri/AppData/Local/Programs/Python/Python310/python.exe d:/GitHubDirectory/Strillinger_CCDE/Cognitive_Services/cognitive_services_test/translator.py
+[
+    {
+        "translations": [
+            {
+                "text": "Die Weltlichkeit der Welt (als solche)!",
+                "to": "de"
+            },
+            {
+                "text": "La mondanità del mondo (in quanto tale)!",
+                "to": "it"
+            }
+        ]
+    }
+]
+Ergebnis:
+de : Die Weltlichkeit der Welt (als solche)!
+it : La mondanità del mondo (in quanto tale)!

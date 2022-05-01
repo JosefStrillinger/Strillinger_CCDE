@@ -1,0 +1,7 @@
+PS D:\GitHubDirectory\Strillinger_CCDE\Cognitive_Services> & C:/Users/jstri/AppData/Local/Programs/Python/Python310/python.exe d:/GitHubDirectory/Strillinger_CCDE/Cognitive_Services/cognitive_services_test/face_recognition.py
+[<azure.cognitiveservices.vision.face.models._models_py3.DetectedFace object at 0x00000273A13FD090>]
+Detected face ID from elon-musk.jpg :
+066c3156-a254-40a2-a0f5-60d3928e9d00
+{'additional_properties': {}, 'width': 650, 'height': 885, 'left': 420, 'top': 235}
+None
+None
