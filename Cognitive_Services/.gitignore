@@ -1,2 +1,4 @@
 ids.py
 img/*
+image_client.py
+image_server.py
