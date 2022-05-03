@@ -4,7 +4,7 @@ import requests
 from io import BytesIO
 from time import sleep
 import datetime
-from picamera import PiCamera
+#from picamera import PiCamera
 import paho.mqtt.client as mqtt
 
 host = "http://192.168.178.26:5000/file"
@@ -18,7 +18,7 @@ channelSend = "foto/get/dev0"
 channelPost = "foto/taken/dev0"
 
 my_stream = BytesIO()
-camera = PiCamera()
+#camera = PiCamera()
 
 def encode_base64(data):
     base64_encode_data = base64.b64encode(data)
@@ -53,7 +53,7 @@ def publish_mqtt(channel):
     client.subscribe(channel)
     
 def take_photo(channel):
-    camera.capture(my_stream, "jpeg")
+    #amera.capture(my_stream, "jpeg")
     publish_mqtt(channel, "foto_taken")
     return my_stream.getvalue()
 

@@ -23,7 +23,7 @@ response = requests.put("%s/%s" % (host, "1"), data={
     "TITLE":"Test",
     "DEVICE": "PC",
     "DATE": datetime.datetime.now(),
-    "PICTURE":encode_string,
+    "PICTURE":encode_string(image_file),#check, if right
     "EXTENSION":"jpg",
     "DESCRIPTION":"test services",
     "SERVICE":"analysis"
@@ -34,7 +34,7 @@ response = requests.put("%s/%s" % (host, "1"), data={
     "TITLE":"Test",
     "DEVICE": "PC",
     "DATE": datetime.datetime.now(),
-    "PICTURE":encode_string,
+    "PICTURE":encode_string(image_file),
     "EXTENSION":"jpg",
     "DESCRIPTION":"test services",
     "SERVICE":"recognition"

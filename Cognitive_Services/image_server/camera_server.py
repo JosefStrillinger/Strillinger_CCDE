@@ -2,13 +2,13 @@ import datetime
 import json
 import os
 from urllib import response
-from flask import Flask, request,jsonify
+from flask import Flask, request, jsonify
 from flask_restful import Resource, Api
 from werkzeug.utils import secure_filename
 import sqlite3
 from sqlalchemy.sql.expression import func
 
-from sqlalchemy import Column, Integer, Text, DateTime, create_engine, LargeBinary
+from sqlalchemy import Column, Integer, Text, DateTime, create_engine, LargeBinary, or_
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -21,7 +21,7 @@ from ids import comp_vision_key as subscription_key
 
 from dataclasses import dataclass
 
-from image_server.camera_client import decode_base64
+from camera_client import decode_base64
 
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
@@ -130,6 +130,11 @@ class File(Resource):
         return jsonify({"message" : "file saved","analysis":analysis, "recognition":recognition})
 
 api.add_resource(File, "/file/<string:id>")
+
+@app.route("/search/<string:name>")
+def search(name):
+    res = Image.query.filter(or_(Image.name.contains(name), Image.desc.contains(name))).all()
+    return jsonify(res)
 
 def createDB():
     Base.metadata.create_all(bind = engine)
