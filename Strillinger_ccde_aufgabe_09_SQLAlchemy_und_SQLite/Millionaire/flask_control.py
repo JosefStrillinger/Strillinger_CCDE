@@ -19,7 +19,7 @@ def showQuests():
 
 @app.route('/ran')
 def ranQuest():
-       return json.dumps(getRandomQuestion(1, getQuests()).serialize())
+   return json.dumps(getRandomQuestion(1, getQuests()).serialize())
 
 @app.route('/game')
 @app.route('/game/<int:answer>')
